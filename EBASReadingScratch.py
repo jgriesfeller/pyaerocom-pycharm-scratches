@@ -13,8 +13,9 @@ def main():
     # print(od)
     DATA_ID = const.EBAS_MULTICOLUMN_NAME
     reader = pio.ReadUngridded(DATA_ID)
-    data = reader.read(vars_to_retrieve="concCocpm25")
+    # data = reader.read(vars_to_retrieve="concCocpm25")
     # data = reader.read(vars_to_retrieve="concso4")
+    data = reader.read(vars_to_retrieve="SO4ugSm3")
     print(data)
 
     # ETOPO1_Ice_g_gmt4.grd
