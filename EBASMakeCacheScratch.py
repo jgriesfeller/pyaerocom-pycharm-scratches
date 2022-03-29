@@ -2,6 +2,7 @@ def main():
     from pyaerocom import const
     import pyaerocom.io as pio
     import pyaerocom as pya
+    import numpy as np
 
     # DATA_ID = const.EBAS_MULTICOLUMN_NAME
     DATA_ID = const.EEA_NRT_NAME
@@ -22,13 +23,21 @@ def main():
         # "concnh4",
         # "wetso4",
         # "concso4pr",
-        "vmro3",
+        "concco",
+        # "vmro3",
     ]
 
     for var_to_read in vars_to_cache:
         data = reader.read(vars_to_retrieve=var_to_read)
-        print(f"# of unique stations: {len(data.unique_station_names)}")
         print(data)
+        print(f"var {var_to_read} # of unique stations: {len(data.unique_station_names)}")
+        units = np.unique([data.metadata[x]['var_info'][var_to_read]['units'] for x in data.metadata])
+        print(f"var {var_to_read} unique units: {units}")
+        if len(units) > 1:
+            for unit in units:
+                print(f"var {var_to_read} metadata idxs with unit {unit}:")
+                print([x for x in data.metadata if data.metadata[x]['var_info'][var_to_read]['units'] == unit])
+        data = None
 
 if __name__ == "__main__":
     main()
