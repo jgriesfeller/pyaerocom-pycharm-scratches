@@ -1,6 +1,6 @@
 # quick and dirty test for obs reading via the api
 
-import tests.conftest
+# import tests.conftest
 # VAR_NAME = ['wetbc']
 # VAR_NAME1 = ['concpm10', 'concpm25']
 # VAR_NAME2 = ['concpm25']
