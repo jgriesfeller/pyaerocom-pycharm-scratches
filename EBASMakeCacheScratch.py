@@ -15,7 +15,6 @@ def main():
         # "concso4",
         # "concbc",
         # "concoa",
-        "concoc",
         # "conctc",
         # "concno2",
         # "concno3",
@@ -23,6 +22,7 @@ def main():
         # "concnh4",
         # "wetso4",
         # "concso4pr",
+        "vmro3",
     ]
 
     for var_to_read in vars_to_cache:
