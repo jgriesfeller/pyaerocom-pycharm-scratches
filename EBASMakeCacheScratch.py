@@ -12,7 +12,7 @@ def main():
         # "concso4pm10",
         # "concpm10",
         # "concpm25",
-        # "concso2",
+        "concso2",
         # "concso4",
         # "concbc",
         # "concoa",
@@ -23,7 +23,7 @@ def main():
         # "concnh4",
         # "wetso4",
         # "concso4pr",
-        "concco",
+        # "concco",
         # "vmro3",
     ]
 
