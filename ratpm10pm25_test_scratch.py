@@ -12,8 +12,8 @@ from pyaerocom import const
 # obs_data2 = obs_obj.read(vars_to_retrieve=VAR_NAME2)
 # DATA_ID = "EEA_AQeRep.v2.Subset"
 
-# DATA_ID = 'EEAAQeRep.v2'
-DATA_ID = const.EBAS_MULTICOLUMN_NAME
+DATA_ID = 'EEAAQeRep.v2'
+# DATA_ID = const.EBAS_MULTICOLUMN_NAME
 VAR_NAME = ['ratpm10pm25']
 
 def main():

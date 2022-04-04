@@ -5,14 +5,15 @@ def main():
     import numpy as np
 
     # DATA_ID = const.EBAS_MULTICOLUMN_NAME
-    DATA_ID = const.EEA_NRT_NAME
+    # DATA_ID = const.EEA_NRT_NAME
+    DATA_ID = const.EEA_V2_NAME
     reader = pio.ReadUngridded(DATA_ID)
     vars_to_cache = [
         # "concso4pm25",
         # "concso4pm10",
         # "concpm10",
         # "concpm25",
-        "concso2",
+        # "concso2",
         # "concso4",
         # "concbc",
         # "concoa",
@@ -25,6 +26,7 @@ def main():
         # "concso4pr",
         # "concco",
         # "vmro3",
+        "ratpm10pm25",
     ]
 
     for var_to_read in vars_to_cache:
